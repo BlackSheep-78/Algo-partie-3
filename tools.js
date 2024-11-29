@@ -6,9 +6,12 @@
  * return:  
  */
 
-function displayArray (obj) {
+function displayArray (obj) 
+{
     let out = 'Contenu du tableau :\n\n';
-    for (let i in obj) {
+    
+    for (let i in obj) 
+    {
         out += "index : " + i + " -> valeur : " + obj[i] + "\n";
     }
 

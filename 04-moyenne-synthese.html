@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exo d'Algo(3) - Moyenne évolutive</title>
+    <title>04 Exo d'Algo(3) - Moyenne évolutive</title>
     <link href="./style.css" rel="stylesheet" />
     <script type="text/javascript" src="./tools.js"></script>
 </head>
@@ -73,8 +73,21 @@
      * Retour : la moyenne calculée
      */
 
-    function average() {
-        // CODE HERE !
+    function average() 
+    {
+        let avg = 0;
+
+        console.log(notes);
+
+        for(let i = 0; i < notes.length; i++)
+        {
+            avg = avg + notes[i]; 
+        }
+
+        avg = avg / notes.length;
+        avg = avg.toFixed(2);
+
+        alert(avg);
 
     }
     /*
@@ -83,9 +96,21 @@
      * Return:
      */
 
-    function refreshAverage() {
-        // CODE HERE !
+    function refreshAverage() 
+    {
+        
+        let note = document.getElementById("note").value;
 
+        if(Number(note) == note && Number(note) >= 0 && Number(note) <= 20)
+        {
+            notes.push(Number(note));
+        }
+        else
+        {
+            alert("Input not valid");  
+        }
+
+        average();
     }
 
 </script>

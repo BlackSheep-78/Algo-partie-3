@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exo d'Algo(3) - Ma phase</title>
+    <title>03 Exo d'Algo(3) - Ma phase</title>
     <!-- link href="./bootstrap.min.css" rel="stylesheet" / -->
     <link href="./style.css" rel="stylesheet" />
     <script type="text/javascript" src="./tools.js"></script>
@@ -40,16 +40,21 @@
 
     // Tableau des notes obtenues
     const notes = [8.75, 14, 13, 5.5, 9, 17, 11.25];
+    
+    function average(noteArray)
+    {
+        let avg = 0;
 
-    /*
-     * Ici le commentaire sur la fonction average...
-     */
+        for(let i = 0; i < noteArray.length; i++)
+        {
+            avg = avg + noteArray[i];
+        }
 
-    function average(noteArray) {
-        // CODE HERE !
-        
+        avg = avg / noteArray.length;
+        avg = avg.toFixed(2);
+
+        alert(avg);
     }
-
 
 </script>
 </body>

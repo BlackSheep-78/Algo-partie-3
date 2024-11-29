@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exo d'Algo(3) - Ma phase</title>
+    <title>01 Exo d'Algo(3) - Ma phase</title>
     <!-- link href="./bootstrap.min.css" rel="stylesheet" / -->
     <link href="./style.css" rel="stylesheet" />
     <script type="text/javascript" src="./tools.js"></script>
@@ -45,7 +45,7 @@
 
     <label>Ma phase</label>
     <br/>
-    <input type="text" id="sentence" placeholder="Votre phrase"/>
+    <input type="text" id="sentence" value="sentence" placeholder="Votre phrase"/>
 
     <button type="button" class="btn btn-primary" onclick="analyze()">
         Analyser la phrase
@@ -54,8 +54,32 @@
 
 <script type="text/javascript">
 
-    function analyze() {
-        // CODE HERE !
+    function analyze() 
+    {
+        let MESSAGE  = null;
+        let sentence = document.getElementById('sentence').value;
+        let length   = sentence.length;
+        let list     = [];
+
+        if(length < 5)
+        {
+            MESSAGE = "Sentence too short !";
+        }
+        else
+        {
+            list[0] = sentence.length;
+            list[1] = sentence.at(4);
+            list[2] = sentence.slice(0, 3);
+            list[3] = sentence.substring(sentence.length - 3);
+
+            console.log(list);
+
+            MESSAGE = list;
+        }
+
+        console.log(table);
+
+        alert(MESSAGE);
     }
 
 </script>
